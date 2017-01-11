@@ -1,37 +1,37 @@
 //Test app
 var watchID = null;
-
+//I onLoad tilføjes eventlistener
 function onLoad(){
-	document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady, false);
 }
-
-function onDeviceReady(){
-	startWatch();
+//kalder startfunktionen når enheden er klar
+function onDeviceReady() {
+startWatch();
 }
-
-function startWatch(){
-	var options = { frequency: 1000 };
-	watchID = navigator.accelerometer.watchAcceleration( onSucces, onError, Options);
+//måler acceleration i bestemte intervaller
+function startWatch() {
+var options = { frequency: 1000 };//vis værdi hvert sekund
+watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options); //
 }
-
-function stopWatch(){
-	if (watchID) {
-		navigate.accelerometer.clearWatch(watchID);
-		watchID = null;
-	}
+function stopWatch() {
+if (watchID) {
+navigator.accelerometer.clearWatch(watchID);
+watchID = null;
 }
-
-function onSucces(acceleration){
-	var accX = acceleration.x;
-	var accY = acceleration.y;
-	var accZ = acceleration.z;
-	var timestamp = acceleration.timestamp;
-	document.getElementById("accelerometer").innerHTML = "Acceleration x: " + accX + "<br />" +
-	"acceleration y: " + accY + "<br />" +
-	"acceleration z: " + accZ + "<br />" +
-	"timestamp: " + timestamp + "<br />";	
 }
-
-function onError(){
-	alert("onError!");
+function onSuccess(acceleration) {
+//Gem sensorværdier
+var accX = acceleration.x ;
+var accY = acceleration.y;
+var accZ = acceleration.z;
+var timestamp = acceleration.timestamp;
+//Udskriv værdier i div med navnet accelerometer
+document.getElementById('accelerometer').innerHTML = 'Acceleration X: ' + accX + '<br
+/>' +
+'Acceleration Y: ' + accY + '<br />' +
+'Acceleration Z: ' + accZ + '<br />' +
+'Timestamp: ' + timestamp + '<br />';
+}
+function onError() {
+alert('onError!');
 }
