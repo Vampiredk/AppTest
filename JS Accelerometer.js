@@ -26,8 +26,7 @@ var accY = acceleration.y;
 var accZ = acceleration.z;
 var timestamp = acceleration.timestamp;
 //Udskriv værdier i div med navnet accelerometer
-document.getElementById('accelerometer').innerHTML = 'Acceleration X: ' + accX + '<br
-/>' +
+document.getElementById('accelerometer').innerHTML = 'Acceleration X: ' + accX + '<br/>' +
 'Acceleration Y: ' + accY + '<br />' +
 'Acceleration Z: ' + accZ + '<br />' +
 'Timestamp: ' + timestamp + '<br />';
