@@ -1,14 +1,21 @@
-//Test app
+
+
 var watchID = null;
+
 //I onLoad tilføjes eventlistener
+
 function onLoad(){
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
+
 //kalder startfunktionen når enheden er klar
+
 function onDeviceReady() {
 	startWatch();
 }
+
 //måler acceleration i bestemte intervaller
+
 function startWatch() {
 	var options = { frequency: 1000 };//vis værdi hvert sekund
 	watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
