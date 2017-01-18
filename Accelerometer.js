@@ -37,10 +37,10 @@ function onSuccess(acceleration) {
 
 function color(x){
 	if (x > 2) {
-		document.body.style.backgroundColor =  "Blue";
+		document.body.style.backgroundColor =  "#33ccff"";
 	}
 	if (x < -2){
-		document.body.style.backgroundColor = "Red";
+		document.body.style.backgroundColor = "#ff6600";
 	}
 }
 
