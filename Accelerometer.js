@@ -39,18 +39,18 @@ function color(x,y){
 	if (x > 2) {
 		document.body.style.backgroundColor =  "#33ccff";
 	}
-	if (x < -2){
+	else if (x < -2){
 		document.body.style.backgroundColor = "rgb(255,102,0)";
 	}
 	if (y > 2){
 		document.body.style.backgroundColor = "#33cc33";
 	}
-	if (y < -2){
+	else if (y < -2){
 		document.body.style.backgroundColor = "#996633";
 	}
-	//else {
-		//document.body.style.backgroundColor = "White";
-	//}
+	if (x < 2 && x > -2 && y < 2 && y > -2) {
+		document.body.style.backgroundColor = "White";
+	}
 }
 
 function onError() {
