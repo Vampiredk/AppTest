@@ -32,17 +32,23 @@ function onSuccess(acceleration) {
 	'Acceleration Y: ' + accY + '<br />' +
 	'Acceleration Z: ' + accZ + '<br />' +
 	'Timestamp: ' + timestamp + '<br />';
-	color(accX);
+	color(accX,accY);
 }
 
-function color(x){
+function color(x,y){
 	if (x > 2) {
 		document.body.style.backgroundColor =  "#33ccff";
 	}
 	if (x < -2){
 		document.body.style.backgroundColor = "rgb(255,102,0)";
 	}
-	else {
+	if (y > 2){
+		document.body.style.backgroundColor = "#33cc33";
+	}
+	if (y < -2){
+		document.body.style.backgroundColor = "#996633";
+	}
+	//else {
 		document.body.style.backgroundColor = "White";
 	}
 }
