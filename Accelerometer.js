@@ -49,8 +49,8 @@ function color(x,y){
 		document.body.style.backgroundColor = "#996633";
 	}
 	//else {
-		document.body.style.backgroundColor = "White";
-	}
+		//document.body.style.backgroundColor = "White";
+	//}
 }
 
 function onError() {
