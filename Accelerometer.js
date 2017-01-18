@@ -37,7 +37,8 @@ function onSuccess(acceleration) {
 function color(){
 	if (x > 2) {
 		backgroundColor: blue;
-	else (x < -2)
+	}
+	else (x < -2){
 		backgroundColor: yellow;
 	}
 }
