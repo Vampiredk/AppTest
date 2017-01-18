@@ -34,14 +34,6 @@ function onSuccess(acceleration) {
 	'Timestamp: ' + timestamp + '<br />';
 }
 
-function color(){
-	if (x > 2) {
-		backgroundColor = blue;
-	else (x < -2)
-		backgroundColor = yellow;
-	}
-}
-
 function onError() {
 	alert('onError!');
 }
