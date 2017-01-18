@@ -37,10 +37,10 @@ function onSuccess(acceleration) {
 
 function color(x){
 	if (x > 2) {
-		document.body.style.backgroundColor = "blue";
+		document.getElementById("test").innerHTML = "Hey";
 	}
-	else (x < -2){
-		document.body.style.backgroundColor = "yellow";
+	if (x < -2){
+		document.getElementById("test").innerHTML = "Ses";
 	}
 }
 
