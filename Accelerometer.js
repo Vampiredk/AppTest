@@ -32,14 +32,15 @@ function onSuccess(acceleration) {
 	'Acceleration Y: ' + accY + '<br />' +
 	'Acceleration Z: ' + accZ + '<br />' +
 	'Timestamp: ' + timestamp + '<br />';
+	color(accX);
 }
 
-function color(){
+function color(x){
 	if (x > 2) {
-		backgroundColor: blue;
+		document.body.style.backgroundColor = "blue";
 	}
 	else (x < -2){
-		backgroundColor: yellow;
+		document.body.style.backgroundColor = "yellow";
 	}
 }
 
